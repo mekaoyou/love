@@ -23,22 +23,19 @@
       <span class="space"><span class="comments">* these code is wrote for you...</span><br>
       Boy * i = <span class="keyword">new</span> Boy(<span class="string">"刘鹏"</span>);<br>
       Girl * u = <span class="keyword">new</span> Girl(<span class="string">"若兰"</span>);<br>
-      <span class="comments">//I am a little boy and looking for love.</span><br>
+      <span class="comments">//I am looking for love.</span><br>
       i.search(u);<br>
-      <span class="comments">//But I don't konw where are you or who you are.</span><br>
       i.miss(u);<br>
       <span class="comments">//I often fall into sadness.</span><br>
       i.want(u);<br>
       <span class="comments">//Love is without reason.</span><br>
       <span class="comments">//Love is full of trouble.</span><br>
-      <span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br>
-      <span class="keyword">while</span> (isHesitate) {<br>
-      <span class="placeholder">i.waitFor(u);<br>
+      <span class="keyword">if</span> (!u.leave() && !u.giveUp()) {<br>
+      <span class="placeholder">i.liveWith(u,DEATH,ALIVE);<br>
       <span class="placeholder"><span class="comments">//Life is a journey.</span><br>
       <span class="placeholder"><span class="comments">//The journey is wonderful because of u.</span><br>
-      <span class="placeholder">isHesitate = u.areMyAngle();<br>
+      <span class="placeholder">myHappyness = u.areMyAngle();<br>
       }<br>
-      <span class="comments"><font color="red">//BUT WHERE ARE YOU!</font></span><br>
       i.need(u);<br>
       i.want(u);<br>
       <span class="comments"><font color="blue">//I am waiting for you!</font></span><br>
@@ -46,10 +43,10 @@
     <div id="loveHeart">
       <canvas id="garden"></canvas>
       <div id="words">
-        <div id="messages"> My girl, I have waiting for you
-          <div id="elapseClock"></div>
+        <div id="messages"> My girl, I am waiting for you
+          <!--<div id="elapseClock"></div>-->
         </div>
-        <div id="loveu"> Where are you?<br/>
+        <div id="loveu"> come to 20 floor<br/>
           <div class="signature"></div>
         </div>
       </div>
@@ -70,7 +67,7 @@
 		if (!document.createElement('canvas').getContext) {
 			var msg = document.createElement("div");
 			msg.id = "errorMsg";
-			msg.innerHTML = "您的浏览器不支持HTML5技术<br/>推荐使用 Chrome/Firefox/Opera 浏览器 喵~ ＞▽＜"; 
+			msg.innerHTML = "您的浏览器不支持HTML5技术<br/>推荐使用 Chrome/Firefox/Opera 浏览器"; 
 			document.body.appendChild(msg);
 			$("#code").css("display", "none")
 			$("#copyright").css("position", "absolute");
